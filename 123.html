@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"></meta>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> <!-- 手機介面設定 -->
+	
+	<title>Steve的網頁</title>
+	
+	<script type="text/javascript">
+	
+		/*alert("高雄發大財");*/
+		
+		/*
+		function test(){
+			alert("你會發大財！");
+		}
+		var mayor = prompt("高雄市長是誰？", " "); //韓總的考驗
+		if (mayor == "韓國瑜" || mayor == "韓導" || mayor == "韓總"){
+			test();
+		}else if(mayor == "高雄"){
+			alert("發財");
+		}else if(mayor == "未來的台灣我講"){
+			alert("立足台灣");
+			alert("胸懷大陸");
+			alert("放眼世界");
+			alert("征服宇宙");
+		}else if(mayor == "幹" || mayor == "幹你娘" || mayor == "靠腰" || mayor == "肏你媽"|| mayor == "靠北" || mayor == "機掰" || mayor == "媽的"){
+			alert("愛與包容");
+		}else if(mayor == "總統"){
+			alert("我希望大家去思考阿");
+			alert("總統兼任行政院長");
+			alert("诶，為什麼不行");
+			alert("啊總統府怎麼辦？");
+			alert("總統府不動");
+			var AM = prompt("就像美國"," ");
+			if (AM == "國務卿"){
+				alert("他事實上是外交部長。");
+			}
+		}else if(mayor == "不丹"){
+			alert("人都傻傻的");
+		}else if(mayor == "local king" || mayor == "你的國際性不高"){
+			alert("漫威都找上來了，喝哈哈");
+		}else{
+			alert("我是用屁眼在看你們的");
+		}*/
+		
+		function change(){
+			var spanobj = /*window.*/document.getElementById("hon")
+			spanobj.innerHTML = "韓你媽幹"
+			spanobj.style.color = "red";
+			spanobj.style.fontWeight = "bold"; 
+			// spanobj.style.display = inlineTable; 韓總的秘密
+		}
+		
+		function disp_prompt() { //打招呼視窗
+			var name1 = prompt("你的名字是：","");
+			
+			if (name1 != null && name1 != "") {
+				document.write("Hello, " +  name1  + "! 今天還好嗎？" + '<br/>');
+				document.write('<br/>');
+				document.write("很高興認識你。");
+			}
+		}
+		function guessnum(){
+			alert("猜數字遊戲"); //小遊戲
+			var answer = Math.floor(Math.random() * 100);
+			var num = prompt ("請輸入一個0~100數字", "0");
+			while (num != answer){
+				if (num > answer) {
+					alert("too large!");
+					var num = prompt ("請輸入一個0~100數字", "0");
+				}else {
+					alert("too small!");
+					var num = prompt ("請輸入一個0~100數字", "0");
+				}
+			}
+			if (num == answer){
+				alert("Correct");
+				alert("我想你會發大財的");	
+			}
+		}
+		//document.getElementById("title").style.textShadow="3px 3px 2px #ffffff"
+		
+		function printTime(){
+		
+
+			var now = new Date();
+			var years = now.getFullYear();
+			var months = now.getMonth() + 1;
+			var days = now.getDate();
+			//var day = now.getDay();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			document.write(months + " / " + days + " / " + years + '<br/>' + '<br/>' + hours + " : " + minutes + " : " + seconds /*+ ":"*/ + '<br/>');
+				
+			
+		}
+		
+		//setInterval("printTime()", 1000);
+		
+	</script>
+	
+	<style type="text/css">
+	
+	.head{
+		background-color:#003344; color:white; front-weight:bold; font-size:30px;
+		text-align:center; padding:10px;
+		text-shadow:6px 6px 5px #ffffff; //陰影呈現
+	}
+	
+	.content{
+		width:1000px; margin-left:auto; margin-right:auto;
+	}
+	
+	.box{
+		width:280px; padding:12px; margin:10px; background-color:white;
+		display:inline-block; vertical-align:text-top; align:left;
+		/*text-align:center;*/ height:300px; line-height:42px;
+		border:3px dashed orange;
+		border-radius:15px;
+		overflow:auto;
+	}
+	
+	div{
+		line-height:30px;
+	}
+	
+	.title{font-weight:bold;vertical-align:top}
+	ul.b {list-style-type:square;} // 項目之前標形狀
+	
+	h2{
+		padding-left:25px;
+		text-shadow:3px 3px 6px #B80000;
+	}
+	
+	h3{
+		text-shadow:3px 3px 5px #ff8000;
+		text-indent:20px;
+	}
+	
+	h4{
+		text-align:left;
+		padding-left:14px;
+	}
+	
+	form{
+		line-height:2em;
+		text-align:left;
+		padding-left:15px;
+	}
+	
+	form>input, form>select{
+		padding:5px 10px; border:1px solid #6d2424; border-radius:5px; // 將角落曲於平滑
+	}
+	
+	/*
+	form>ok{
+		color:#008800;
+	}
+	*/
+	
+	form>input:valid+.ok{
+		display:incline;
+		color:#008800;
+	}
+	
+	form>input:invalid+.ok{
+		display:none; //隱藏內容
+	}
+	
+	#btn{
+		border:1px solid gray;
+		background-color:#ffffff;padding:5px;
+	}
+	#btn:hover{
+		background-color:#888888;
+	}
+	
+	input:focus{
+		border:2px solid #ff0000;
+	}
+	@media screen and (max-width:600px){
+		.head{font-size:24px;}
+		.content{width:100%;text-align:center;}
+	}
+	
+	</style>
+	
+</head>
+<body style="margin:0px;background-color:#eeeeee;">
+	<div class="head">Introduction</div>
+	<div class="content">
+	
+		<div class="box"> <!-- div 須設定類別項 -->
+		
+			<div class="title"><span id="title">我的基本資料</span></div>  <!-- span記得設定id -->
+			<div>我的名字是&nbsp;<span style="font-size:21px;font-weight:bold;">鍾書維</span></div>
+			<div>就讀於<a href="https://www.nccu.edu.tw/" title="NCCU網站">國立政治大學</a></div> <!--連結href與title之間不需符號隔開-->
+			<div>經濟學系輔日文系</div>
+			<div>我住台北</div>
+			<div>是雲林人</div>
+			<div>目前大四</div>
+			
+		</div>
+		
+		<div class="box">
+		
+			<div class="title">我的個人興趣</div>
+			<div>喜歡運動</div>
+			<div>喜愛籃球跟網球</div>
+			<div>喜歡陪小孩玩</div>
+			<div>喜愛程式設計</div>
+			<div>喜歡參與志工服務</div>
+			<div>最愛的球員 ：<br/><a href="https://www.facebook.com/Nadal/">Rafael Nadal </a><br/>
+			and <br/><a href="https://www.facebook.com/russellwestbrook/">Russell Westbrook</a></div>
+			
+		</div>
+		
+		<div class="box">
+		
+			<div class="title">歡迎聯絡我</div>
+			<div>E-mail: <u>105209044@nccu.edu.tw</u></div>
+			<div>我的&nbsp; <a href="https://www.facebook.com/SteveChung1018" title="我的個人臉書"><u>facebook</u></a></div>
+			<div>我的手機號碼：<span style="color:purple"><u>0900510652</u></span></div>
+			<div>
+				留話給我：<input type="text" required placeholder="勿輸入怒罵及色情語詞" /><button id="btn"; onclick="alert('已送出。')"><span onmouseover="this.style.color='red';">送出</span></button>
+			</div>
+			
+			<div>
+				<button id="btn2"; onclick="alert('start');guessnum()"; ><span onmouseover="this.style.color='red'"; onmouseout="this.style.color='black';">玩小遊戲</span></button>
+			</div>
+			
+			<input type="button" onclick="alert('hi');disp_prompt()"; onmouseover="this.style.color='purple'"; onmouseout="this.style.color='black';" value="哈囉哈" />
+			
+			<input type="button" onclick="alert('What time is it?'); printTime()"; onmouseover="this.style.color='blue'"; onmouseout="this.style.color='black';" value="報時間" />
+			
+		</div>
+		
+	<hr style="color:#ff8000">
+	
+	<h2 class="title">我的照片<h2/>
+	<a href="https://www.youtube.com/watch?v=l9TsC43eCtU"><img src="123.jpg"/></a>
+	
+	<hr style="color:#C0C0C0">
+	
+	<h3 style="color:#443144">我的能力</h3>
+	<ul class="a">
+		<li class="lix">程式語言&nbsp; ex: Python、C、C++、Javasript、MySQL、Java；學習經歷：3年、2年、1年、1年、半年、半年。</li>
+		<li class="lix">日文；學習經驗：2年，已取得N4證照。</li>
+		<li class="lix">英文；學習時間：17年，已取得多益金色證照（890分）。</li>
+	</ul>
+	
+	<hr style="color:#ff8000">
+	
+	<h4>註冊帳號</h4>
+	<form onsubmit="alert('表單送出');">
+	
+		帳號：<input type="text" required placeholder="5~14英數字" pattern="[0-9a-zA-Z]{5,15}" /> 
+			<span class="ok">&nbsp;ok</span><br/>
+			
+		密碼：<input type="password" required placeholder="5~14英數字" pattern="[0-9a-zA-Z]{5,15}" />
+			<span class="ok">&nbsp;ok</span><br/>
+			
+		電郵：<input type="email" required />
+		
+			<span class="ok">&nbsp;ok</span><br/>
+		電話：<input type="text" pattern="[0-9]{8,10}" /><br/>
+		
+		性別：
+			男 <input type="radio" name="gender" value="male" required />
+			女 <input type="radio" name="gender" value="female" required /><br/>
+			
+		生日年分：<select required>
+			<option value="">出生年</option>
+			<option value='2006'>2006</option>
+			<option value="2005">2005</option>
+			<option value="2004">2004</option>
+			<option value="2003">2003</option>
+			<option value="2002">2002</option>
+			<option value="2001">2001</option>
+			<option value="2000">2000</option>
+			<option value="1999">1999</option>
+			<option value="1998">1998</option>
+			<option value="1997">1997</option>
+			<option value="1996">1996</option>
+			<option value="1995">1995</option>
+			<option value="1994">1994</option>
+			<option value="1993">1993</option>
+			<option value="1992">1992</option>
+			<option value="1991">1991</option>
+			<option value="1990">1990</option>
+			<option value='1989'>1989</option>
+			<option value='1988'>1988</option>
+			
+		</select><br/>
+		
+		生日月分：<select required>
+			<option value="">出生月</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select><br/>
+		
+		生日日期：<select required>
+			<option value="">出生日</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option>
+		</select><br/><br/>
+		
+		<input type="submit" value="送出資料"; onmouseover="this.style.color='blue'"; onmouseout="this.style.color='black'" /><br/>
+		<hr style="color:red">
+		<!-- 黑色 #000000 紅色 #FF0000 綠色 # 00FF00 藍色 #0000FF 黃色 #FFFF00 白色 #FFFFFF 紫色 #FF00FF 淺藍#00FFFF -->
+</body>
+</html>

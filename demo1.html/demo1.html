@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <button type="button" id="like">喜歡</button>
+    <script>
+        var likebn = document.getElementById('like')
+
+        var state = {
+            like : false
+
+        } 
+
+        var render = function(){
+            if (state.like){
+                likebn.innerHTML = '已讚'
+                likebn.style.color = 'red'
+                
+            }
+
+            else{
+                likebn.innerHTML = '喜歡'
+                likebn.style.color = 'black'
+            }
+            
+        }
+
+        likebn.addEventListener('click', function(){
+            state.like = !state.like
+            render()
+
+        })
+
+    </script>
+
+</body>
